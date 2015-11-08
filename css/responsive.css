@@ -74,11 +74,11 @@
 }
 
 @media only screen and (700px) {
-  
+
   #navbar nav a {
     display: none;
   }
-  
+
   #navbar nav a.menu-icon {
     display: block;
     float: right;
@@ -86,16 +86,21 @@
     padding: 10px 20px;
     width: auto;
   }
-  
+
   #logo {
     padding: 60px 0 0;
   }
-  
+
   #social {
     top: 60px;
   }
 }
 
+@media only screen and (495px) {
+  #logo h2 {
+    visibility: hidden;
+  }
+}
 
 
 
