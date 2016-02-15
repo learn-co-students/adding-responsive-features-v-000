@@ -281,7 +281,7 @@ header {
 }
 
 #navbar nav a.menu-icon {
-  display: none;
+  display: none; /* CSS to NOT display hamburger icon at default */
 }
 
 /*////////// LOGO //////////*/

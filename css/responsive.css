@@ -1,0 +1,108 @@
+
+/* From 26:08 in video */
+
+@media only screen and (max-width: 1108px) {
+
+  .wrapper { /* fluid width */
+    width: 90%; 
+  }
+
+  #social { /* override the default fixed position */
+    position: absolute;
+    top: 82 px;
+    right: 4px;
+    width: auto;
+  }
+
+  #social a { /* override the default display block */
+    display:inline-block;
+  }
+}
+
+@media only screen and (max-width: 900px) {
+
+  body {
+    font-size: 85%; /* fluid text size so that not so big */
+  }
+
+  #logo h1 {
+      width: 35px;
+      height: 35px;
+  }
+
+  #logo h2 {
+    font-size: 2.2em;
+  }
+
+  #social {
+    top: 72px;
+  }
+
+  .col-3 p { /* change column-count of 3 */
+    column-count:2;
+    -webkit-column-count:2;
+    -moz-column-count:2;
+
+  }
+
+}
+
+@media only screen and (max-width: 800px) {
+
+  #navbar nav a { /* make link text smaller with screen size*/
+    font-size: 0.9em;
+  }
+}
+
+@media only screen and (max-width: 750px) {
+  .col-1, .col-2, .col-3 { /* remove column structure with screen size */
+    width: 100%;
+    margin-left: 0;
+    float: none;
+  }
+
+  .border-right {
+    border: 0;
+  }
+
+  #details div {
+    height: auto;
+    padding: bottom 20px;
+  }
+
+   .col-3 p { /* change column-count of 2 at even smaller screen */
+    column-count:1;
+    -webkit-column-count:1;
+    -moz-column-count:1;
+
+  }
+}
+
+@media only screen and (max-width: 700px) {
+  #navbar nav a { /* hide all navbar links*/
+    display: none;
+  }
+
+  #navbar nav a.menu-icon { /* show hamburger icon in top right
+    note: right now we have not yet coded JS for the drop-down menu */
+    display: block;
+    float: right;
+    font-size: 1.5em;
+    padding: 10px 20px;
+    width: auto;
+  }
+
+  #logo { /* remove some space as screen size decreases */
+    padding: 60px 0 0;
+  }
+
+  #social { /* remove some space as screen size decreases */
+    top: 60px;
+  }
+}
+
+@media only screen and (max-width: 495px) {
+  #logo h2 { /* remove excessive text as screen size decreases */
+    visibility: hidden;
+  }
+}
