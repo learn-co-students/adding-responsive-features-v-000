@@ -1,4 +1,4 @@
-@@media only screen and (max-width: 1108px) {
+@media only screen and (max-width: 1108px) {
 
   .wrapper {
     width: 90%;
@@ -16,7 +16,7 @@
   }
 }
 
-@@media only screen and (max-width: 900px) {
+@media only screen and (max-width: 900px) {
   body {
     font-size: 85%;
   }
@@ -41,13 +41,13 @@
   }
 }
 
-@@media only screen (max-width: 800px) {
+@media only screen and (max-width: 800px) {
   #navbar nav a {
     font-size: 0.9em;
   }
 }
 
-@@media only screen (max-width: 750px) {
+@media only screen and (max-width: 750px) {
   .col-1, .col-2, .col-3 {
     width: 100%;
     margin-left: 0;
@@ -62,15 +62,15 @@
     height: auto;
     padding-bottom: 20px;
   }
+}
 
   .col-3 p {
     -moz-column-count: 1;
     -webkit-column-count: 1;
     column-count: 1;
   }
-}
 
-@@media only screen (max-width: 700px) {
+@media only screen and (max-width: 700px) {
   #navbar nav a {
     display: none;
   }
@@ -89,5 +89,12 @@
 
   #social {
     top: 60px;
+  }
+}
+
+@media only screen and (max-width: 495px) {
+
+  #logo h2  {
+    visibility: hidden;
   }
 }
