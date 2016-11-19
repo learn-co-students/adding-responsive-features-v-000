@@ -1,6 +1,6 @@
 @media only screen and (max-width: 1108px) {
    .wrapper {
-     width: 90% <!--fluid width-->;
+     width: 90%
    }
    #social {
     position: absolute;
@@ -15,7 +15,7 @@
 
 @media only screen and (max-width: 900px) {
   .wrapper  {
-    width: 90% <!--fluid width-->auto;
+    width: 90% auto;
   }
   #logo body {
     font-size: 85%;
