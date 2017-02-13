@@ -1,0 +1,107 @@
+@media only screen and (max-width: 1108px) { /* "1108px" is value we got from Chrome developer tools. When you shrink
+the screen the "social" icons start to overlap the image. To prevent overlay we use 1108px as maximum width. */
+
+	.wrapper { /* We want the wrapper to be 90% before it reaches the max-width of 1108px. */
+		width: 90%;
+	}
+
+	#social { /* We are changing the "social" icons from "fixed" to "absolute" and their position at top right. */
+		position: absolute;
+		top: 82px;
+		right: 4px;
+		width: auto;
+	}
+
+	#social a { /* Display icons side by side instead of on top of each other. */
+		display: inline-block;
+	}
+}
+
+@media only screen and (max-width: 900px) { /* Continue to shrink the display to see where else we need to apply a
+media query. At ~900px some of the text within the navigation buttons is getting close to their borders, #logo h1
+and h2 needs to be smaller, social icons need to be moved up and ".col-3 p" needs to change to two(2) columns. */
+    body {
+    	font-size: 85%;
+    }
+
+    #logo h1 {
+    	width: 35px;
+    	height: 35px;
+    }
+
+    #logo h2 {
+    	font-size: 2.2em;
+    }
+
+    #social {
+    	top: 72px;
+    }
+
+    .col-3 p {
+    	-moz-column-count: 2;
+	    -webkit-column-count: 2;
+	    column-count: 2;
+    }
+}
+
+@media only screen and (max-width: 800px) { /* Continue to shrink the display to see where else we need to apply a
+media query. At ~800px some of the text within the navigation buttons is getting close to their borders. */
+    #navbar nav a {
+    	font-size: 0.9em;
+    }
+}
+
+@media only screen and (max-width: 750px) { /* Continue to shrink the display to see where else we need to apply a
+media query. At ~750px columns look better as one(1) column, so change width to 100%, no margin and no float and
+remove ".border-right", adjust #details and change column-count to 1. */
+	.col-1, .col-2, .col-3 {
+		width: 100%;
+		margin-left: 0%;
+		float: none;
+	}
+
+	.border-right {
+		border: 0;
+	}
+
+	#details div {
+		height: auto;
+		padding-bottom: 20px;
+	}
+
+	.col-3 p {
+    	-moz-column-count: 1;
+	    -webkit-column-count: 1;
+	    column-count: 1;
+    }
+}
+
+@media only screen and (max-width: 700px) { /* Below 700px we want to change the navigation bar to a "hamburger"
+icon. Also need to move logo and social icons. */
+	#navbar nav a {
+		display: none;
+	}
+
+	#navbar nav a.menu-icon {
+	    display: block;
+	    float: right;
+	    font-size: 1.5em;
+	    padding: 10px 20px;
+	    width: auto;
+	}
+
+	#logo {
+		padding: 60px 0 0;
+	}
+
+	#social {
+		top: 60px;
+	}
+}
+
+@media only screen and (max-width: 495px) { /* Since logo is too big we need to hide it. */
+
+	#logo h2 {
+		visibility: hidden;
+	}
+}
