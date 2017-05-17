@@ -61,7 +61,7 @@
     height: auto;
     padding-bottom: 20px;
   }
-  
+
   .col-3 p{
     -moz-column-count: 1;
     -webkit-column-count: 1;
@@ -89,5 +89,11 @@
 
   #social {
     top: 60px;
+  }
+}
+
+@media only screen and (max-width: 495px){
+  #logo h2{
+    visibility: hidden;
   }
 }
