@@ -7,7 +7,7 @@
   #social {
     position: absolute;
     top: 82px;
-    right: 4%;
+    right: 4px;
     width: auto;
   }
 
@@ -48,7 +48,7 @@
   }
 }
 
-@media only screen (max-width: 750px) {
+@media only screen and (max-width: 750px) {
   .col-1, .col-2, .col-3 {
     width: 100%;
     margin-left: 0;
@@ -70,7 +70,7 @@
   }
 }
 
-@media only screen (max-width: 700px) {
+@media only screen and (max-width: 700px) {
     #navbar nav a {
       display: none;
     }
@@ -89,7 +89,7 @@
     }
 }
 
-@media only screen (max-width: 495px) {
+@media only screen and (max-width: 495px) {
   #logo h2 {
     visibility: hidden;
   }
