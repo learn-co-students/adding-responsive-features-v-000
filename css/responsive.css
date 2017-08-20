@@ -1,0 +1,106 @@
+  @media only screen  and (max-width: 1108px) {
+
+      .wrapper{ /*make wrapper fluid @ 90% of viewable area when screen smaller than 1108px*/
+        width: 90%;
+      }
+
+      #social { /* move social media block above main content when screen getss smaller than 1108px*/
+        position: absolute;
+        top: 82px;
+        right: 4px;
+        width: auto;
+      }
+
+      #social a { /*make social media block appear side by side */
+        display: inline-block;
+      }
+  }/*end of 1108px media query*/
+
+  @media only screen and (max-width: 900px){ /*for tablet sized screens */
+
+    body{ /*make font size for whole page smaller @ 900px*/
+      font-size: 85%;
+    }
+
+    #logo h1 { /*make logo image 10px smaller*/
+      width: 35px;
+      height: 35px;
+    }
+
+    #logo h2 { /*logo text down from original size of 2.5em */
+      font-size: 2.2em;
+    }
+
+    #social {/*shift social icons up to center on smaller logo text*/
+      top:72px;
+    }
+
+    .col-3 p{
+      -moz-column-count: 2;
+      -webkit-column-count: 2;
+      column-count: 2;
+      }
+  }/* end of 900px media query */
+
+  @media only screen and (max-width: 800px){
+
+      #navbar nav a { /*make link text inside nav bar buttons smaller @ 800px */
+          font-size: 0.9em;
+      }
+    }/*end of 800px media query */
+
+  @media only screen and (max-width:750px){
+
+    .col-1, .col-2, .col-3 { /* modify column structure @ 750px to stack sections vertically (single column) and eliminate margins*/
+      width: 100%;
+      margin-left: 0;
+      float: none;
+    }
+
+    .border-right {
+      border: 0; /*remove right border in details section (border class)*/
+    }
+
+    #details div {
+      height: auto; /*set height to auto versus original 220px*/
+      padding-bottom: 20px; /*add padding between divs in details section since they're now in single column (stacked vertical)*/
+    }
+
+    .col-3 p{ /*set all three column classes to a single column @ 750px*/
+      -moz-column-count: 1;
+      -webkit-column-count: 1;
+      column-count: 1;
+    }
+
+  }/*end of 750px media query */
+
+  @media only screen and (max-width: 700px) {
+
+    #navbar nav a { /*hide all navbar links*/
+      display: none;
+    }
+
+    #navbar nav a.menu-icon {
+      display: block;
+      float: right;
+      font-size: 1.5em;
+      padding: 10px 20px;
+      width: auto;
+    }
+
+    #logo {
+      padding: 60px 0 0; /* reduce space above logo @ 700px*/
+    }
+
+    #social {
+      top: 60px; /*move social icons up @ 700px*/
+    }
+  } /*end of 700px media query */
+
+  @media only screen and (max-width: 495px){
+
+  #logo h2{
+    visibility: hidden;
+  }
+
+  }
