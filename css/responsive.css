@@ -1,3 +1,4 @@
+/* ------- Below 1108px -------------*/
 @media only screen and (max-width: 1108px) {
   .wrapper {
     width: 90%;
@@ -15,6 +16,7 @@
   }
 }
 
+/* --------------- Below 900 -------- */
 @media only screen and (max-width: 900px) {
   body {
     font-size: 85%;
@@ -31,5 +33,73 @@
 
   #social {
     top: 72px;
+  }
+
+  .col-3 p {
+    -moz-column-count: 2;
+    -webkit-column-count: 2;
+    column-count: 2;
+  }
+}
+
+
+/* ----------- Below 800 ----------- */
+@media only screen and (max-width: 800px) {
+  #navbar nav a {
+    font-size: 0.9em;
+  }
+}
+
+/* ----------- Below 750 ------------ */
+@media only screen and (max-width: 750px) {
+  .col-1, .col-2, .col-3 {
+    width: 100%;
+    margin-left: 0;
+    float: none;
+  }
+
+  .border-right {
+    border: 0;
+  }
+
+  #details div {
+    height: auto;
+    padding: 20px;
+  }
+
+  .col-3 p {
+    -moz-column-count: 1;
+    -webkit-column-count: 1;
+    column-count: 1;
+  }
+}
+
+/* ------------ Below 700 ----------- */
+@media only screen and (max-width: 700px) {
+  #navbar nav a {
+    display: none;
+  }
+
+  #navbar nav a.menu-icon {
+    display: block;
+    float: right;
+    font-size: 1.5em;
+    width: auto;
+    padding: 10px 20px;
+  }
+
+  #logo {
+    padding: 60px 0 0;
+  }
+
+  #social {
+    top: 60px;
+  }
+}
+
+/* --------- Below 495 -------------- */
+@media only screen and (max-width: 495px) {
+  #logo h2 {
+    visibility: hidden;
   }
 }
