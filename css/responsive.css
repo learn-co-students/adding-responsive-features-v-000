@@ -11,7 +11,7 @@
   }
 
   #social a {
-    display: block;
+    display: inline-block;
   }
 
 }
@@ -31,7 +31,7 @@
     font-size: 2.2em;
   }
 
-  social {
+  #social {
     top: 72px;
   }
 
