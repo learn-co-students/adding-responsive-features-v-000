@@ -1,0 +1,138 @@
+@media only screen and (max-width: 1108px) {
+/* Pixel count was determined using the Developer Tools in Chrome to determine best aesthetic */
+
+.wrapper {
+  width: 90%;
+}
+/* Makes the wrapper fluid. @90% there will be 5% on both the right and left */
+
+#social {
+ position: absolute;
+ top: 82px;
+ right: 4%;
+ width: auto;
+}
+
+ /* Changes the position of the social div which holds the social media icons because as the screen gets
+ smaller, they start to move into the content to their left. The new position is calculated using the Dev tools 
+ in Chrome as you shrink the browser to see what looks best. The social div is part of the body so it's position will
+ from the place where the body starts. It just so happens that when displayed it is placed in the header area but
+ it is not part of the header div */
+  
+ #social a {
+ display: inline-block;
+ }
+ 
+/* Changes the links/icons so they appear side by side */
+ 
+
+}
+
+@media only screen and (max-width: 900px) {
+
+  body {
+	 font-size: 85%;
+  }
+/* As the screen gets smaller than 900 px, the text starts to overlap. Adjust the body text downward */
+
+
+  #logo h1 {
+    width: 35px;
+    height:35px; 
+  }
+/* The logo image (swirly E) is too big as the screen scales down so change it's size */
+
+
+  #logo h2 {
+    font-size: 2.2em;
+  }
+/* The logo text is also too big as the screen size scales down so scale it down */
+
+  #social {
+  top: 72px;
+}
+/* This moves the social media icons up by 10 px as the header area is now smaller since the text size changed*/ 
+
+ .col-3 p {
+   -moz-column-count: 2;
+   -webkit-column-count: 2;
+   column-count: 2;
+}
+ /* This will change the column size from 3 (in the original css file) to 2 when the screen size is below 900px */  
+ 
+}
+  
+@media only screen and (max-width: 800px) {
+  #navbar nav a {
+    font-size: 0.9em
+  }
+/* This shrinks the navbar text as the browser window dips below 800px*/
+}
+
+@media only screen and (max-width: 750px) {
+  .col-1, .col-2, .col-3 {
+    width: 100%;
+    margin-left: 0;
+    float: none;
+  }
+/* Because the column was getting too thin, this has re-structures the columns so they stack on top of each other. The
+float is removed as they no longer need to float next to each other, and they take up 100% of the width rather 
+than 1/3. These are changes to the original CSS column definitions */
+
+
+  .border-right {
+    border:0;
+  }
+/* This gets rid of the border at the very bottom of the page in the details section as it too needs to be adjusted
+to stack rather than have it's divs side by side */
+
+  #details div {
+   height: auto;
+   padding-bottom: 20px;
+  
+  }
+/* This makes all the divs inside the details section (contact info, etc) go from a fixed height to one that scales
+with the rest of the content. A bottom padding is added as they are now stacked on top of each other rather than 
+ side by side */
+ 
+ .col-3 p {
+   -moz-column-count: 1;
+   -webkit-column-count: 1;
+   column-count: 1;
+}
+ /* This will change the column size from 3 (in the original css file) to 1 when the screen size is below 750px */ 
+}
+@media only screen and (max-width: 700px) {
+  #navbar nav a {
+  display: none;
+}
+/* this will hide the navbar links when the screen gets too small to display them. A menu bar will be used instead
+with JS being used to animate a drop down menu*/
+ 
+ 
+   #navbar nav a.menu-icon {
+     display: block;
+     float: right;
+     font-size: 1.5em;
+     padding: 10px 20px;
+     width: auto;
+  }
+  /* this element was set up in the CSS and is the menu bar that will replace the navbar links */
+  
+    #logo {
+      padding: 60px 0 0;
+    }
+/* reduces the space above the logo from the original 82px of padding */
+
+    #social {
+      top: 60px;
+    }   
+/* re-positions the social media icons so that there is less space from the top */ 
+
+@media only screen and (max-width: 495px) {
+  #logo h2 {
+    visibility: hidden;
+  }
+  /* This will hide the company logo but retain the icon when the screen gets really small. Note - I don't like
+  this as it makes it hard to know who's site your looking at. */  
+}       
