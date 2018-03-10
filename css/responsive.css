@@ -1,0 +1,106 @@
+@media only screen and (max-width: 1108px) {
+
+	.wrapper { /*reduces size*/
+		width: 90%;
+	}
+
+	#social { /*switches from fixed to absolute positioning and moves into the logo bar*/
+		position: absolute;
+		top: 82px;
+		right: 4px;
+		width: auto;
+	}
+
+	#social a { /*positions the icons side-by-side*/
+		display: inline-block;
+	}
+}
+
+@media only screen and (max-width: 900px) {
+/*these next few reduce the size of various elements*/
+	body {
+		font-size: 85%;
+	}
+
+	#logo h1 {
+		width: 35px;
+		height: 35px;
+	}
+
+	#logo h2 {
+		font-size: 2.2em;
+	}
+
+	#social {
+		top: 72px;
+	}
+
+	.col-3 p { /*reduces number of columns from 3 to 2*/
+		-moz-column-count: 2;
+		-webkit-column-count: 2;
+		column-count: 2;
+	}
+}
+
+@media only screen and (max-width: 800px) {
+
+	#navbar nav a { /*reduces font-size in nav-bar*/
+		font-size: 0.9em;
+	}
+}
+
+@media only screen and (max-width: 750px) {
+
+	.col-1, .col-2, .col-3 { /*so that the column on the right jumps under the image so they are stacked vertically */
+		width: 100%;
+		margin-left: 0;
+		float: none;
+	}
+
+	.border-right { /*removes border to the right*/
+		border: 0;
+	}
+
+	#details div {
+		height: auto; /*so that it is only as tall as the content*/
+		padding-bottom: 20px; /*so there is space between them*/
+	}
+
+	.col-3 p { /*reduces number of columns from 2 to 1*/
+		-moz-column-count: 1;
+		-webkit-column-count: 1;
+		column-count: 1;
+	}
+}
+
+@media only screen and (max-width: 700px) {
+
+	#navbar nav a { /*hides navigation bar*/
+		display: none;
+	}
+
+	#navbar nav a.menu-icon { /*displays and style new nav menu icon*/
+		display: block;
+		float: right;
+		font-size: 1.5em;
+		padding: 10px 20px;
+		width: auto;
+	}
+
+	#logo { /*reduces space above logo from 80 to 60px*/
+		padding: 60px 0 0;
+	}
+
+	#social { /*moves social icon down from the top of the logo bar*/
+		top: 60px;
+	}
+}
+
+@media only screen and (max-width: 495px) {
+
+	#logo h2 { /*hides text for logo but still shows logo image*/
+		visibility: hidden;
+	}
+}
+
+
