@@ -44,6 +44,10 @@ tr:nth-child(even) {
   background: #efefef;
 }
 
+tr {
+  text-align: center;
+}
+
 th, td {
   padding: 10px;
   border-right: 1px solid #ccc;
@@ -353,6 +357,3 @@ footer {
   background: #eee;
   border-top: 1px solid; 
 }
-
-
-
