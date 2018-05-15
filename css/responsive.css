@@ -1,4 +1,5 @@
-@media only screen and (max-width: 1008px) {
+@media only screen and (max-width: 1108px) {
+
   .wrapper {
     width: 90%;
   }
@@ -16,6 +17,7 @@
 }
 
 @media only screen and (max-width: 900px) {
+
   body {
     font-size: 85%;
   }
@@ -34,7 +36,8 @@
   }
 
   .col-3 p {
-    -moz-column-count: 2;
+     -moz-column-count: 2;
+    -webkit-column-count: 2;
     column-count: 2;
   }
 }
@@ -47,29 +50,31 @@
 }
 
 @media only screen and (max-width: 750px) {
+
   .col-1, .col-2, .col-3 {
     width: 100%;
     margin-left: 0;
-    float: none;
+    float: none;  
   }
 
-.border-right {
-  border: 0;
+  .border-right {
+    border: 0;
+  }
+
+  #details div {
+    height: auto;
+    padding-bottom: 20px;
+  }
+
+  .col-3 p {
+     -moz-column-count: 1;
+    -webkit-column-count: 1;
+    column-count: 1;
+  }
 }
 
-#details div {
-  height: auto;
-  padding-bottom: 20px;
-}
+@media only screen and (max-width: 700px) {
 
-.col-3 p {
-  -moz-column-count: 1;
-  column-count: 1;
-}
-
-}
-
-@media only screen and (max-width:700px) {
   #navbar nav a {
     display: none;
   }
@@ -89,11 +94,12 @@
   #social {
     top: 60px;
   }
+
 }
 
 @media only screen and (max-width: 495px) {
 
-  h2 {
+  #logo h2 {
     visibility: hidden;
   }
 }
