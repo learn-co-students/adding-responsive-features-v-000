@@ -1,6 +1,6 @@
 # Responsive Features Code-Along
 
-## Overview
+## Overvie
 
 In this code along exercise we will make our layout responsive using CSS media
 queries. All the files you need to follow along are provided and opening this
