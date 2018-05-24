@@ -1,5 +1,9 @@
 # Responsive Features Code-Along
 
+## NOTE 
+
+All work done at repo Jirles/exceptional-realty. This was only forked to 'pass' the lab.
+
 ## Overview
 
 In this code along exercise we will make our layout responsive using CSS media
