@@ -1,0 +1,106 @@
+@media only screen and (max-width: 1108px) {
+
+  .wrapper {
+    width: 90%;
+  }
+
+  #social { /* moves the social icons */
+    position: absolute;
+    top: 82px;
+    right: 4%;
+    width: auto;
+  }
+
+  #social a {
+    display: inline-block; /*side by side*/
+  }
+}
+
+@media only screen and (max-width: 900px) {
+
+  body {
+    font-size: 85%; /* Overall text 85% smaller */
+  }
+
+  #logo h1 { /* reduces the logo size from 45 to 35px */
+  width: 35px;
+  height: 35px;
+  }
+
+  #logo h2 { /* reduces the logo font size */
+    font-size: 2.2em;
+  }
+
+  #social {
+    top: 72px; /* moves the social elements up */
+  }
+
+  .col-3 p { /* all p with col-3 class */
+    -moz-column-count: 2;
+    -webkit-column-count: 2;
+    column-count: 2;
+  }
+}
+
+@media only screen and (max-width: 800px) {
+
+  #navbar nav a { /*adjusting the links in the navbar */
+    font-size: 0.9em;
+  }
+}
+
+@media only screen and (max-width: 750px) {
+  .col-1, .col-2, .col-3 {
+    width: 100%; /* getting rid of the column structure */
+    margin-left: 0;
+    float: none;
+  }
+
+  .border-right {
+    border: 0; /* removes the border */
+  }
+
+  #details div { /* changing the bottom details div.. contact/correspondene/links) */
+    height: auto;
+    padding-bottom: 20px; /* space on bottom of elements */
+  }
+
+  .col-3 p { /* all p with col-3 class */
+    -moz-column-count: 1;
+    -webkit-column-count: 1;
+    column-count: 1;
+  }
+}
+
+@media only screen and (max-width: 700px) {
+
+  /* added hamburger icon to html */
+  /* <a class="menu-icon">&#9776;</a> */
+
+  #navbar nav a {
+    display: none; /* hides all the navbar links */
+  }
+
+  #navbar nav a.menu-icon {
+    display: block;
+    float: right;
+    font-size: 1.5em;
+    padding: 10px 20px;
+    width: auto;
+  }
+
+  #logo {
+    padding: 60px 0 0;
+  }
+
+  #social {
+    top: 60px;
+  }
+}
+
+@media only screen and (max-width: 495px) {
+
+  #logo h2 {
+    visibility: hidden;
+  }
+}
