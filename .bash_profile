@@ -1,0 +1,1 @@
+export PS1="\[\e[30;46m\]\d\[\e[m\] \[\e[30;45m\]ROBIN\[\e[m\] \W  \n ♥️... "export PS1="\[\e[37;46m\]\d\[\e[m\] \[\e[30;45m\]ROBIN\[\e[m\] \W  \n ♥️... "export PS1="\[\e[37;44m\]\d\[\e[m\] \[\e[30;42m\]ROBIN\[\e[m\] \W \n ♥️  -> \ " export PS1="\[\e[37;44m\]\d\[\e[m\] \[\e[30;42m\]ROBIN\[\e[m\] \W \n ♥️  -> "
