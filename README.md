@@ -7,7 +7,7 @@ queries. All the files you need to follow along are provided and opening this
 code along on the in-browser IDE will fork and clone down a copy for you, but
 if you would like to continue working from your personal `exceptional-realty`
 repository:
-
+ 
 ```
 git clone https://github.com/<your_username_here>/exceptional-realty
 cd exceptional-realty
