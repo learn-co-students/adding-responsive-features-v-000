@@ -19,7 +19,7 @@ li {
   margin-left: 20px;
 }
 
-p, address { 
+p, address {
   font-size: 1em; /* 16px, ?pt, 100%, 1em */
   line-height: 1.5em;
 }
@@ -292,8 +292,8 @@ header {
 
 #logo h1 {
   display: inline-block;
-  width: 45px;
-  height: 45px;
+  width: 35px;
+  height: 35px;
   text-indent: 100%;
   white-space: nowrap;
   overflow: hidden;
@@ -304,7 +304,7 @@ header {
 
 #logo h2 {
   display: inline-block;
-  font: 2.5em "Clicker Script", cursive;
+  font: 2.2em "Clicker Script", cursive;
   margin: 0;
   position: relative;
   top: -9px;
@@ -347,12 +347,9 @@ section {
 /*////////// FOOTER //////////*/
 
 footer {
-  text-align: center; 
+  text-align: center;
   font-size: 0.75em;
   padding: 10px;
   background: #eee;
-  border-top: 1px solid; 
+  border-top: 1px solid;
 }
-
-
-
