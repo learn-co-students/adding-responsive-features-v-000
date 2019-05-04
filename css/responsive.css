@@ -1,0 +1,185 @@
+@media only screen and (max-width: 1126px) { /* I changed this to 1126px instead of 1108px, in order to match the appearance of the video's index page. */
+  
+  .wrapper { /* Give the wrapper a fluid, not fixed, width. */
+    width: 90%; /* Add 5% space to each side of the wrapper. */
+  }
+  
+  #social { /* Reposition the social links at the top of the page instead of fixed to the right side of the screen. */
+    position: absolute;
+    top: 82px;
+    right: 4%; /* In the video, Mr. Grover said 4px, but meant (and typed) 4%. */
+    width: auto;
+  }
+  
+  #social a {
+    display: inline-block; /* These will now display side-by-side instead of vertically. */
+  }
+}
+
+@media only screen and (max-width: 975px) { /* I changed this from the video's 900px, for the same reason as the other media query. */
+  
+  body {
+    font-size: 85%; /* This is an easy way to make ALL of the text on our site (except text with rem units, I think) smaller. */
+  }
+  
+  #logo h1 { /* Decrease the "e" logo's width and height by 10px each. */
+    width: 35px;
+    height: 35px;
+  }
+  
+  #logo h2 {
+    font-size: 2.2em; /* Before the media query, this was set to 2.5em. */
+  }
+  
+  #social {
+    top: 72px; /* This aligns the social links with the header. */
+  }
+  
+  .col-3 p { /* Make the paragraphs wider by decreasing their column-count. */
+    -moz-column-count: 2;
+    -webkit-column-count: 2;
+    column-count: 2;
+  }
+  
+  /* The figcaptions and footer text get hard to see at 85%. I may change this later. */
+}
+
+@media only screen and (max-width: 850px) { /* I changed this from the video's 800px. */
+  
+  #navbar nav a {
+    /* The text in the navbar links started at a font-size of 1em (or 100% in this case).
+    The media query above then made 1em = 85%, thus decreasing the font-size.
+    Finally, THIS media query further decreases the links' font-size to 0.9em, or 76.5%. */
+    font-size: 0.9em;
+  }
+}
+
+@media only screen and (max-width: 770px) { /* I changed this from the video's 750px. */
+  
+  .col-1, .col-2, .col-3 { /* This could probably be simplified with [class*="col-"] */
+    /* This further prevents the columns and their text from becoming too narrow. */
+    
+    width: 100%; /* This will help the columns stack vertically instead of side-by-side. */
+    margin-left: 0; /* The 2% left margin on certain columns is no longer needed. */
+    float: none; /* This puts the columns back into the regular layout flow, and you no longer need to clear any elements below them. */
+  }
+  
+  .border-right {
+    border: 0; /* Remove ALL borders (in this case the border-right) on the element. */
+  }
+  
+  #details div {
+    height: auto; /* These div elements now have a fluid, not fixed, height, and are as tall as their content. */
+    padding-bottom: 20px; /* Add spacing between each div in #details. */
+    
+    /* Note that these properties apply to ALL divs that are descended from #details, not just its children. 
+    So that creates, among other things, extra padding at the bottom of #details. */
+  }
+  
+  .col-3 p { /* Reset the column-count to 1 (the default value). */
+    -moz-column-count: 1;
+    -webkit-column-count: 1;
+    column-count: 1;
+  }
+}
+
+@media only screen and (max-width: 750px) { /* I changed this from the video's 700px. */
+
+  /* Initially, we displayed all of the links except the menu-icon (the last “link”, which actually does NOT link anywhere) as inline-block; we chose NOT to display the menu-icon.
+  Now, however, we want make the menu-icon (which looks like a hamburger) display as a block-level element and hide the other links.
+  This avoids the issue of having the links' text jumble on top of each other on small devices.
+  Later, we will use Javascript to make the menu-icon toggle between hiding and displaying a drop-down list of the now-hidden links. */
+  
+  #navbar nav a { /* Hide the links. */
+    display: none;
+  }
+  
+  #navbar nav a.menu-icon { /* Display the hamburger menu icon. */
+  /* The "a" is unnecessary; just pay close attention to specificity, or this selector won't work! */
+    
+    display: block;
+    float: right; /* That may explain the need for the clearfix class on the nav element! */
+    font-size: 1.5em; /* If I did the math right, this is 1.5 x 85%, or 127.5%. */
+    padding: 10px 20px; /* This decreases vertical padding and increases horizontal padding. */
+    width: auto; /* Similar to the height, this makes the element as WIDE as its content, instead of its previous value of 16.6666667%. */
+  }
+  
+  #logo { /* This shrinks the logo, getting rid of spacing on top that opened up when the menu-icon's vertical padding was decreased. */
+    padding: 60px 0 0; /* Given the previous padding setting (74px 0 0), this may be better stated as "padding-top: 60px;". */
+  }
+  
+  #social { /* The new #logo rule above requires us to reposition the #social links as well, to keep them aligned with the logo. */
+    top: 60px;
+  }
+}
+
+@media only screen and (max-width: 510px) { /* I changed this from the video's 495px. */
+  
+  #logo h2 { /* Hide the logo text so that the media links won't overlap it. */
+    visibility: hidden;
+    /* I tried "display: none;" but that caused an unwanted side effect of shrinking the height of the #logo parent. */
+  }
+}
+
+/* I need a media query here at about 390px to fix the table on the Market Report page, but I don't know how to fix the table or its parent container. */
+
+@media only screen and (max-width: 345px) { /* I added this media query to further adjust the #logo on smaller devices. */
+
+  /* body {
+    font-size: 75%;
+  } I may adjust this later */
+  
+  #logo {
+    padding-bottom: 13px; /* I calculated this based on the different element heights, in order to get even spacing between the h2 and the navbar. */
+  }
+  
+  #logo h2 {
+    display: none; /* This prevents the hidden text from wrapping and causing extra height in the logo. */
+  }
+}
+
+@media only screen and (max-width: 250px) { /* I also added this, which gets rid of overflow on the Real Estate Listings and Contact pages. */
+
+  ul, ol {
+    padding-inline-start: 5px;
+  }
+  
+  input[type="submit"] { /* This prevents the "Send" button from overflowing. */
+    width: 100%;
+  }
+}
+
+@media only screen and (max-width: 205px) { /* I added this as well. */
+  
+  body { /* I think the text looks better proportionally like this. */
+    font-size: 75%;
+  }
+  
+  #logo {
+    padding-bottom: 67px; /* This lets the logo background surround the #social links. 
+    I can refine the spacing later. */
+  }
+  
+  #logo h1 { /* Center the "e" logo. */
+    display: block;
+    margin: 0 auto;
+  }
+  
+  #navbar nav a.menu-icon { /* In this case, this centers the menu-icon. */
+    float: none;
+  }
+  
+  #social { /* This will prevent the links and "e" logo from overlapping. */
+    top: 110px;
+    right: 1%;
+    /* margin: 0 auto; I wanted to center the element, but this didn't work. */
+    /* I haven't figured out how to center absolutely-positioned elements, at least not fluidly for different screen widths. 
+    I may have to change the HTML itself to make this work. */
+    
+    /* Another solution: float the "e" logo right, and adjust the #logo's padding-bottom accordingly. */
+  }
+  
+  #details .first p a { /* This prevents the e-mail link from causing overflow. */
+    overflow-wrap: break-word;
+  }
+}
