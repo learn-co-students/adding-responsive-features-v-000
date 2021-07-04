@@ -249,6 +249,7 @@ header {
 
 #navbar nav {
   border-left: 1px solid #ccc;
+  font-size: 0;
 }
 
 #navbar nav a {
@@ -262,6 +263,7 @@ header {
   border-right: 1px solid #ccc;
   text-decoration: none;
   font: 1em "Trebuchet MS", Arial, sans-serif;
+  font-size: 16px
 }
 
 #navbar nav a.selected {
