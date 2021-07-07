@@ -1,0 +1,123 @@
+@media only screen and (max-width: 1108px) {
+  .wrapper {
+    width: 90%; /*setting fluid width now; it will still have 5% on each side */
+    } /* this affects all the content */
+
+  #social {
+      position: absolute;
+      top: 82px;
+      right: 4px;
+      width: auto;
+    }
+
+  #social a {  /* this is to make the social nav bar go vertical instead of horizontal */
+    display: inline-block;
+    }
+}
+
+/* around 900 pixels, the text in the nav bar was getting close to the edges, and the text of the page looked like it could be a little smaller.  Hence this block of code: */
+
+@media only screen and (max-width: 900px) {
+
+  body {
+    font-size: 85%;
+  }
+
+  #logo h1 {
+    width: 35px;
+    height: 35px;
+  }
+
+  #logo h2 {
+    font-size: 2.2em;
+  }
+
+  #social {
+     top: 72px;
+  }
+
+  /* This is to take col-3 from two columns to one */
+  /* TN: for some reason this is making 5 columns when this shrinks, but part of this file was already lost due to some problem on learn, so plowing ahead */
+
+  .col-3 {
+    -moz-column-count: 2;
+    -webkit-column-count: 2;
+    column-count: 2;
+    background-color: pink;
+  }
+
+
+
+}
+
+@media only screen and (max-width: 800px) {
+  /* this is adjusting nav bars b/c content getting too close to the edges */
+  #navbar nav a {
+    font-size: 0.9em;
+  }
+}
+
+@media only screen and (max-width: 750px) {
+
+  .col-1, .col-2, .col-3 {
+    width: 100%; /* this will help them stack vertically */
+    margin-left: 0;
+    float: none;
+  }
+
+  .border-right {
+    border: 0; /*this will remove the border on contact info etc. on bottom */
+  }
+
+  #details div {
+    height: auto; /*this is to get the element as high as the content.  Goal here is to have all the contact info etc. display vertically */
+  }
+
+  .col-3 { /* this is still not working to get the text to 1 column.  Now it goes from 3 to 5 to 3 when shrinking PROBLEM */
+    -moz-column-count: 1;
+    -webkit-column-count: 1;
+    column-count: 1;
+    background-color: pink;
+  }
+
+  /* interesting to note that his main picture shrinks too, in the column-section (pink) that's giving me problems.  I wonder how he did that. */
+}
+
+@media only screen and (max-width: 700px) {
+/* COMMON STRAGEGY FOR DEADLING WITH NAV BARS UPON SHRINKING REALLY MUCH: ELMINATE MENU BAR AS IS AND SHOW A LITTLE MENU BAR ICON
+IF YOU LOOK IN THE HTML, AFTER THE HUD LINK, YOU'LL SEE THE FOLLOWING:
+  <a class="menu-icon">&#9776;</a> -- called the hamburger menu icon. see getbootstrap.com, eg.  javascript will help later on so the menu pops out
+  when hitting the hamburger menu.  The &#9776; will display the hamburger.
+
+  Originally, this class is set to display: none.  Now we are going to hide the other nav bar links and display this one.
+
+*/
+  #navbar nav a {
+    display: none;
+  }
+
+  #navbar nav a.menu-icon{
+    display: block;
+    float: right;
+    font-size: 1.5em;
+    padding: 10px 20px;
+    width: auto;
+  }
+
+  #logo {
+    padding: 60px 0 0;
+  }
+
+  #social {
+    top: 60px;
+  }
+}
+
+/* this is to hide the name of company (but logo stays) when things get too small */
+
+@media only screen and (max-width: 495px){
+
+  #logo h2 {
+    visibility: hidden;
+  }
+}
